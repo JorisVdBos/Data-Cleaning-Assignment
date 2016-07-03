@@ -1,5 +1,7 @@
 Running the "run_analysis.R" code results in two data sets "featuresData" and "inertialSignalData". The choice was made to split the data up in two data frames, because the features are results from processing data over the whole period of one test time frame of 2.56 sec, while the signalling data itself is data points collected on discrete times. Both data frames can be linked by the column "timeFrameID".
 
+Finally, the script produces a data frame "averagePersonActivity" which contains the average of every feature for every activity of every subject.
+
 # featuresData data frame
 This data frame contains values for the features recorded in one test time frame of 2.56 sec.
 
@@ -35,3 +37,9 @@ column 898 to 1025:
 accelerometerY1 to accelerometerY128 - extracted from "total_acc_y_test" and "total_acc_y_train"
 column 1026 to 1154:
 accelerometerZ1 to accelerometerZ128 - extracted from "total_acc_z_test" and "total_acc_z_train"
+
+# averagePersonActivity
+subjectID - The subject's ID that performed the test. 
+activity - The activity the subject was performing. 
+feature - Name of the feature
+average - The average of the feature, while the subject was performing the activity

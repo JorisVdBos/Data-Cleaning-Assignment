@@ -4,6 +4,8 @@ This repo was created by me for the peer Graded Assignment of the course "Gettin
 The "run_analysis.R" file contains R code to tidy the data set found here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip describes the variables that result after running the "run_analysis.R".
 
+"Codebook.md" contains information about the results of "run_analysis.R" and explaination on the columns of the resulting data frames of the R code.
+
 ## Dataset License:
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 

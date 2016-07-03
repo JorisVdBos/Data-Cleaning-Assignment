@@ -93,3 +93,29 @@ if (!file.exists("UCI HAR Dataset")) {
 featuresData <- rbind(readFeatures("test"), readFeatures("train"))
 inertialSignalData <- rbind(readInertialSignalData("test"), readInertialSignalData("train"))
 print("Data reading completed!")
+
+# Create a second data set with the average of each variable for each activity and each subject
+print("Calculating averages of every feature of every activity of every subject. This will take a few minutes.")
+rm(averagePersonActivity)
+# Loop subjects
+for (i in unique(featuresData$subjectID)) {
+        # Loop activities
+        for(j in unique(featuresData$activity)) {
+                # Loop features
+                for(k in names(featuresData)[4:564])  {
+                        
+                        average <- mean(featuresData[,k][
+                                featuresData$subjectID == i & featuresData$activity == j])
+                        
+                        if (exists("averagePersonActivity")) {
+                                averagePersonActivity <- rbind(averagePersonActivity, data.frame(
+                                        subject = i, activity = j, feature = k, average = average
+                                ))
+                        } else 
+                                averagePersonActivity <- data.frame(
+                                        subject = i, activity = j, feature = k, average = average
+                                )
+                }       
+        }
+}
+print("Calculation complete!")
