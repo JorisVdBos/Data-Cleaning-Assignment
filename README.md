@@ -1,5 +1,5 @@
 # Data-Cleaning-Assignment Coursera
-This repo was created by me for the peer Graded Assignment of the course "Getting and Cleaning" of the "Data Science" track. The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
+This repo was created by me for the peer Graded Assignment of the course "Getting and Cleaning" of the "Data Science" track. The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set.
 
 The "run_analysis.R" file contains R code to tidy the data set found here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip describes the variables that result after running the "run_analysis.R".
