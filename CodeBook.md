@@ -1,17 +1,17 @@
 Running the "run_analysis.R" code results in two data sets "featuresData" and "inertialSignalData". The choice was made to split the data up in two data frames, because the features are results from processing data over the whole period of one test time frame of 2.56 sec, while the signalling data itself is data points collected on discrete times. Both data frames can be linked by the column "timeFrameID".
 
 # featuresData data frame
-This data frame contains the  about the features recorded in one test time frame of 2.56 sec.
+This data frame contains values for the features recorded in one test time frame of 2.56 sec.
 
 Columns:
 timeFrameID - This column was synthesized and consists of the subjectID and the number of the experiment on that subject.
 subjectID - The subject's ID that performed the test. This column is extracted from "subject_test.txt"
 activity - The activity the subject was performing. This column was extracted from "y_test.txt" and "y_train.txt" and reformed to a factor. The levels of the factor are extracted from "activity_labels.txt"
 
-The next 561 columns are extracted from "X_test.txt" and "X_train.txt".
+The next 561 columns are extracted from "X_test.txt" and "X_train.txt". The names of the features were extracted from "features.txt".
 
 # inertialSignalData data frame
-This data frame contains measurements of the accelerometer and gyroscope during the test time frame of 2.56 sec.
+This data frame contains measurements of the accelerometer and gyroscope during the test time frames of 2.56 sec.
 
 Columns:
 timeFrameID - This column was synthesized and consists of the subjectID and the number of the experiment on that subject.
