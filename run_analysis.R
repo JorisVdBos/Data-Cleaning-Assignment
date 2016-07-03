@@ -96,7 +96,7 @@ print("Data reading completed!")
 
 # Create a second data set with the average of each variable for each activity and each subject
 print("Calculating averages of every feature of every activity of every subject. This will take a few minutes.")
-rm(averagePersonActivity)
+rm(averagePersonActivityFeature)
 # Loop subjects
 for (i in unique(featuresData$subjectID)) {
         # Loop activities
@@ -107,12 +107,12 @@ for (i in unique(featuresData$subjectID)) {
                         average <- mean(featuresData[,k][
                                 featuresData$subjectID == i & featuresData$activity == j])
                         
-                        if (exists("averagePersonActivity")) {
-                                averagePersonActivity <- rbind(averagePersonActivity, data.frame(
+                        if (exists("averagePersonActivityFeature")) {
+                                averagePersonActivityFeature <- rbind(averagePersonActivityFeature, data.frame(
                                         subject = i, activity = j, feature = k, average = average
                                 ))
                         } else 
-                                averagePersonActivity <- data.frame(
+                                averagePersonActivityFeature <- data.frame(
                                         subject = i, activity = j, feature = k, average = average
                                 )
                 }       
